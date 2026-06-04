@@ -1144,19 +1144,80 @@
   }
 
   /* RESPONSIVE */
+  /* Global: all tables scrollable on any screen */
+  .diag-table, .tools-table, .compare-table, .benchmark-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius);
+  }
+  .diag-table td, .tools-table td, .compare-table td, .benchmark-table td,
+  .diag-table th, .tools-table th, .compare-table th, .benchmark-table th {
+    white-space: normal;
+    min-width: 130px;
+  }
+
   @media (max-width: 768px) {
     nav { padding: 0 16px; }
     .nav-links { display: none; }
-    section { padding: 80px 20px 60px; }
-    .exec-grid, .options-grid, .needs-grid, .flows-grid, .pillars-grid, .market-grid { grid-template-columns: 1fr; }
+    section { padding: 80px 16px 60px; }
+
+    /* Grids → single column */
+    .exec-grid, .options-grid, .needs-grid, .flows-grid,
+    .pillars-grid, .market-grid { grid-template-columns: 1fr !important; }
     .pillar-card.priority-1 { grid-column: span 1; }
+
+    /* Hero stats → 2 cols */
+    .hero-stats { grid-template-columns: 1fr 1fr !important; }
+
+    /* Phase timeline */
     .phase-item { grid-template-columns: 1fr; }
     .phase-left { flex-direction: row; align-items: center; gap: 12px; }
     .phase-item::before { display: none; }
-    .hero-stats { grid-template-columns: 1fr; }
+    .phase-right { padding: 20px; }
+
+    /* Steps */
     .step-item { grid-template-columns: 1fr; }
     .step-num { display: none; }
-    h1 { font-size: 32px; }
+
+    /* Typography */
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    .option-pct { font-size: 36px; }
+
+    /* Flow steps → vertical */
+    .flow-steps { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .flow-arrow { transform: rotate(90deg); margin: 0 0 0 10px; }
+
+    /* Inline-style 2-col grids inside flow cards */
+    .flow-card > div[style*="grid"] { display: block !important; }
+    .flow-card > div[style*="grid"] > div { margin-bottom: 24px; }
+
+    /* Setup fee 3-col breakdown → 2 cols */
+    div[style*="repeat(3,1fr)"],
+    div[style*="repeat(3, 1fr)"] { grid-template-columns: 1fr 1fr !important; }
+
+    /* Setup fee banner → stack */
+    div[style*="justify-content:space-between"] { flex-direction: column !important; }
+
+    /* Tables */
+    .diag-table, .tools-table, .compare-table, .benchmark-table { font-size: 12px; }
+    .diag-table td, .tools-table td, .compare-table td, .benchmark-table td,
+    .diag-table th, .tools-table th, .compare-table th, .benchmark-table th {
+      min-width: 110px;
+      padding: 10px 12px;
+    }
+
+    /* Tags & lists */
+    .pillar-audiences { flex-direction: column; }
+    .audience-tag { width: 100%; }
+    .deliverables { flex-direction: column; }
+    .step-meta { flex-direction: column; }
+    .hero-meta { flex-direction: column; gap: 8px; }
+
+    /* Cards padding */
+    .option-card { padding: 24px 20px; }
+    .closing-quote { padding: 24px 20px; font-size: 14px; }
   }
 
   @media print {
