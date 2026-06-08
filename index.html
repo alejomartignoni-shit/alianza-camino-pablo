@@ -1164,7 +1164,9 @@
 
     /* Grids → single column */
     .exec-grid, .options-grid, .needs-grid, .flows-grid,
-    .pillars-grid, .market-grid { grid-template-columns: 1fr !important; }
+    .pillars-grid, .market-grid,
+    div[style*="repeat(3,1fr)"][class=""] { grid-template-columns: 1fr !important; }
+    #marca .pillars-grid { grid-template-columns: 1fr !important; }
     .pillar-card.priority-1 { grid-column: span 1; }
 
     /* Hero stats → 2 cols */
@@ -1237,7 +1239,8 @@
     <li><a href="#pilares">Pilares</a></li>
     <li><a href="#diagnostico">Diagnóstico</a></li>
     <li><a href="#sistema">Sistema</a></li>
-    <li><a href="#fases">Fases</a></li>
+    <li><a href="#marca">Marca</a></li>
+    <li><a href="#fases">Roadmap</a></li>
     <li><a href="#alianza">Alianza</a></li>
     <li><a href="#pasos">Pasos</a></li>
   </ul>
@@ -1645,12 +1648,99 @@
   </div>
 </section>
 
+<!-- MARCA & CONTENIDO -->
+<section id="marca">
+  <div class="container">
+    <div class="section-tag">05</div>
+    <h2>Marca Digital &amp; <span>Motor de Contenido</span></h2>
+    <p class="section-desc">Antes de los ads: construir una presencia que genere confianza, inbound orgánico y comunidad. El contenido trabaja 24/7 aunque el presupuesto sea cero.</p>
+
+    <div class="pillars-grid fade-in" style="grid-template-columns:repeat(3,1fr)">
+      <div class="pillar-card">
+        <span class="pillar-icon">🎨</span>
+        <div class="pillar-title" style="font-size:17px">Identidad de Marca</div>
+        <p class="pillar-desc">Nombre, colores, tono, tagline. Una marca que represente a Pablo y Cintia — no una cuenta genérica de contractors.</p>
+        <div class="pillar-kpi">
+          <div class="kpi-item"><strong>1</strong>Logo + kit</div>
+          <div class="kpi-item"><strong>ES + EN</strong>Tono bilingüe</div>
+        </div>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">📱</span>
+        <div class="pillar-title" style="font-size:17px">Presencia Digital</div>
+        <p class="pillar-desc">Instagram, Facebook y TikTok configurados y optimizados. Bio bilingüe, highlights de servicios, llamada a la acción directa hacia el bot.</p>
+        <div class="pillar-kpi">
+          <div class="kpi-item"><strong>3</strong>Plataformas</div>
+          <div class="kpi-item"><strong>Orgánico</strong>primero</div>
+        </div>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-icon">⚙️</span>
+        <div class="pillar-title" style="font-size:17px">PM de Creativos</div>
+        <p class="pillar-desc">Workspace en Notion para gestionar el pipeline de contenido diario: pendiente → en creación → aprobación → publicado.</p>
+        <div class="pillar-kpi">
+          <div class="kpi-item"><strong>30</strong>días armados</div>
+          <div class="kpi-item"><strong>1 click</strong>aprobación</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in" style="margin-top:32px">
+      <h3 style="font-size:16px;font-weight:700;color:var(--white);margin-bottom:16px">Motor de contenido diario — estructura semanal</h3>
+      <table class="tools-table">
+        <thead>
+          <tr><th>Día</th><th>Formato</th><th>Audiencia</th><th>Objetivo</th><th>Canal</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lunes</td><td><span class="tool-badge">Reel 30s</span></td><td>🇪🇸 Contractors</td><td>"Así conseguí trabajo constante" — testimonial</td><td>IG + FB + TikTok</td></tr>
+          <tr><td>Martes</td><td><span class="tool-badge">Carrusel</span></td><td>🇺🇸 Propietarios</td><td>"3 errores al contratar un roofer" — educativo</td><td>IG + FB</td></tr>
+          <tr><td>Miércoles</td><td><span class="tool-badge">Story + Poll</span></td><td>Mixta</td><td>Engagement: encuesta, Q&amp;A</td><td>IG Stories</td></tr>
+          <tr><td>Jueves</td><td><span class="tool-badge">Reel 30s</span></td><td>🇪🇸 Hispanos</td><td>"Comprá tu casa sin banco" — Slow Flips</td><td>IG + TikTok</td></tr>
+          <tr><td>Viernes</td><td><span class="tool-badge">Carrusel</span></td><td>🇪🇸 Contractors</td><td>Social proof: "estos contractors trabajan con nosotros"</td><td>IG + FB</td></tr>
+          <tr><td>Sábado</td><td><span class="tool-badge">Post grupos</span></td><td>🇪🇸 Comunidades</td><td>Lead gen orgánico — link directo al bot</td><td>25+ grupos FB</td></tr>
+          <tr><td>Domingo</td><td><span class="tool-badge">Story BTS</span></td><td>Comunidad</td><td>Behind the scenes — humanizar la marca</td><td>IG Stories</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="exec-grid fade-in" style="margin-top:24px">
+      <div class="exec-opp">
+        <div class="exec-title">📢 Sistema de Grupos Facebook</div>
+        <ul class="exec-list">
+          <li><span class="icon">🗂️</span><strong>25+ grupos hispanos mapeados</strong> por estado: contractors, handyman, real estate, comunidades locales</li>
+          <li><span class="icon">⏰</span>Rotación de horarios: mañana / tarde / noche, días alternos por grupo para no caer en spam</li>
+          <li><span class="icon">✍️</span>5–7 versiones de copy por pilar — mismo mensaje, palabras distintas</li>
+          <li><span class="icon">🔗</span>Cada post lleva al bot — los leads entran calificados, no fríos</li>
+          <li><span class="icon">📊</span>Tracking semanal: qué grupos generan más leads reales</li>
+        </ul>
+      </div>
+      <div class="exec-opp">
+        <div class="exec-title">🗂️ Gestión de Creativos (Notion PM)</div>
+        <ul class="exec-list">
+          <li><span class="icon">📋</span><strong>Pipeline Notion:</strong> Pendiente → En creación → Revisión → Programado → Publicado</li>
+          <li><span class="icon">🎨</span>Templates Canva con brand kit — crear reel o carrusel en 10 minutos</li>
+          <li><span class="icon">📅</span>30 días de contenido planificados de antemano — nunca arrancar el día sin saber qué postear</li>
+          <li><span class="icon">✅</span>Aprobación en 1 click desde el móvil — Pablo/Cintia ven el borrador y aprueban</li>
+          <li><span class="icon">📈</span>Review semanal: qué contenido genera más leads, qué reciclar, qué cortar</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="highlight-box fade-in" style="margin-top:24px">
+      <span class="hl-icon">💡</span>
+      <p class="hl-text">
+        El contenido orgánico <strong>no reemplaza los ads — los potencia</strong>. Una cuenta con 50–100 posts de prueba social convierte 2–3× mejor cuando el ad llega. Construimos la presencia antes de encender el presupuesto publicitario.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- FASES -->
 <section id="fases">
   <div class="container">
-    <div class="section-tag">05</div>
-    <h2>Fases de <span>Implementación</span></h2>
-    <p class="section-desc">Tres fases claras: arrancamos sin gastar un peso, validamos con resultado real, escalamos lo que funciona.</p>
+    <div class="section-tag">06</div>
+    <h2>Roadmap de <span>90 Días</span></h2>
+    <p class="section-desc">Tres fases con entregables concretos: arrancamos sin gastar un peso, validamos con resultado real, escalamos lo que funciona.</p>
 
     <div class="phases-timeline fade-in">
 
@@ -1748,7 +1838,7 @@
 <!-- ALIANZA -->
 <section id="alianza">
   <div class="container">
-    <div class="section-tag">06</div>
+    <div class="section-tag">07</div>
     <h2>Modelo de <span>Alianza y Compensación</span></h2>
     <p class="section-desc">Dos opciones claras. Sin papeles para empezar — la prueba son los resultados.</p>
 
@@ -1756,14 +1846,15 @@
     <div class="fade-in" style="background:linear-gradient(135deg,#0d2a1f,var(--card));border:1px solid rgba(0,200,150,0.4);border-radius:var(--radius);padding:28px 32px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
       <div>
         <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Inversión inicial requerida</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--white);margin-bottom:4px">Setup Fee: desde <span style="color:var(--green)">$600</span></div>
-        <div style="font-size:13px;color:var(--text2);max-width:500px;line-height:1.6">Cubre el setup completo del sistema: bot de calificación, CRM, flujos de automatización, copies de ads y dashboard. Lo requiero para poder dedicarle el tiempo completo que el proyecto necesita desde el primer día.</div>
+        <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--white);margin-bottom:4px">Setup Fee: <span style="color:var(--green)">$2,000</span></div>
+        <div style="font-size:13px;color:var(--text2);max-width:500px;line-height:1.6">Cubre el sistema completo: identidad de marca, perfiles en redes, motor de contenido 30 días, bot de calificación, CRM, flujos de automatización y dashboard. Es mi piel en el juego desde el día uno — y el trabajo creativo y operativo que requiere hacerlo bien.</div>
       </div>
       <div style="flex-shrink:0;text-align:center">
         <div style="background:var(--green-dim);border:1px solid rgba(0,200,150,0.3);border-radius:var(--radius);padding:20px 28px">
-          <div style="font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px">Luego del setup</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:var(--green)">Revenue Share</div>
-          <div style="font-size:12px;color:var(--text2);margin-top:4px">Solo pagás cuando ganás</div>
+          <div style="font-size:12px;color:var(--text3);font-weight:600;margin-bottom:4px;text-decoration:line-through">Valor de mercado: $5,000–7,000</div>
+          <div style="font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px">Inversión de alianza</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--green)">$2,000</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:4px">Luego: revenue share<br>solo pagás cuando ganás</div>
         </div>
       </div>
     </div>
@@ -1802,9 +1893,24 @@
           <div style="font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px">Capacitación</div>
           <div style="font-size:12px;color:var(--text2);line-height:1.5">1 sesión de onboarding para que Pablo/Cintia sepan leer el sistema y cuándo entrar.</div>
         </div>
+        <div style="background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px">
+          <div style="font-size:20px;margin-bottom:8px">🎨</div>
+          <div style="font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px">Identidad de marca</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Logo, paleta, tipografía, tono bilingüe. Kit completo aplicado en Canva y redes.</div>
+        </div>
+        <div style="background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px">
+          <div style="font-size:20px;margin-bottom:8px">📱</div>
+          <div style="font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px">Perfiles en redes</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Instagram, Facebook y TikTok optimizados. Bio bilingüe, highlights, CTA directo al bot.</div>
+        </div>
+        <div style="background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px">
+          <div style="font-size:20px;margin-bottom:8px">📅</div>
+          <div style="font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px">Plan de contenido 30 días</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Calendario editorial + 30 posts listos + templates Canva + sistema de grupos FB.</div>
+        </div>
       </div>
       <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:var(--radius-sm);padding:14px 18px;font-size:13px;color:#fbbf24;font-weight:500">
-        ⏱ Timeframe de setup: <strong style="color:var(--white)">7–14 días</strong> desde el pago. El sistema queda funcionando antes de invertir un peso en ads.
+        ⏱ Timeframe de setup: <strong style="color:var(--white)">14–21 días</strong> desde el pago. Marca, sistema y contenido del primer mes listos antes de invertir un peso en ads.
       </div>
     </div>
 
@@ -1870,7 +1976,7 @@
 <!-- PRÓXIMOS PASOS -->
 <section id="pasos">
   <div class="container">
-    <div class="section-tag">07</div>
+    <div class="section-tag">08</div>
     <h2>¿Qué necesito de Pablo y Cintia?<br><span>Próximos Pasos</span></h2>
     <p class="section-desc">Accesos concretos para arrancar esta semana. Nada que lleve más de 30 minutos conseguir.</p>
 
