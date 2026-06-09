@@ -1144,15 +1144,15 @@
   }
 
   /* RESPONSIVE */
-  /* Global: all tables scrollable on any screen */
-  .diag-table, .tools-table, .compare-table, .benchmark-table {
-    display: block;
+  /* All tables: use .table-scroll-wrap for horizontal scroll, table fills wrapper natively */
+  .table-scroll-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: var(--radius);
+    width: 100%;
   }
-  .table-scroll-wrap {
-    position: relative;
+  .diag-table, .tools-table, .compare-table, .benchmark-table {
+    width: 100%;
   }
   .diag-table td, .tools-table td, .compare-table td, .benchmark-table td,
   .diag-table th, .tools-table th, .compare-table th, .benchmark-table th {
@@ -1387,6 +1387,7 @@
     <p class="section-desc">Mapa de la situación real: qué existe hoy, dónde están las fricciones y qué oportunidades abre la automatización.</p>
 
     <div class="fade-in">
+      <div class="table-scroll-wrap">
       <table class="diag-table">
         <thead>
           <tr>
@@ -1433,6 +1434,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
 
       <div class="global-box">
         <span style="font-size:28px;flex-shrink:0">💡</span>
@@ -1634,6 +1636,7 @@
     <!-- Herramientas -->
     <div class="fade-in">
       <h3 style="font-size:16px;font-weight:700;color:var(--white);margin-bottom:16px">Stack tecnológico del sistema</h3>
+      <div class="table-scroll-wrap">
       <table class="tools-table">
         <thead>
           <tr><th>Componente</th><th>Herramienta</th><th>Función</th></tr>
@@ -1648,6 +1651,7 @@
           <tr><td>Reportes</td><td><span class="tool-badge">Dashboard KPIs</span></td><td>Revenue · CAC · LTV · ROI por pilar en tiempo real</td></tr>
         </tbody>
       </table>
+      </div>
     </div>
 
     <!-- CUSTOMER VALUE JOURNEY -->
@@ -1752,6 +1756,7 @@
 
     <div class="fade-in" style="margin-top:32px">
       <h3 style="font-size:16px;font-weight:700;color:var(--white);margin-bottom:16px">Motor de contenido diario — estructura semanal</h3>
+      <div class="table-scroll-wrap">
       <table class="tools-table">
         <thead>
           <tr><th>Día</th><th>Formato</th><th>Audiencia</th><th>Objetivo</th><th>Canal</th></tr>
@@ -1766,6 +1771,7 @@
           <tr><td>Domingo</td><td><span class="tool-badge">Story BTS</span></td><td>Comunidad</td><td>Behind the scenes — humanizar la marca</td><td>IG Stories</td></tr>
         </tbody>
       </table>
+      </div>
     </div>
 
     <div class="exec-grid fade-in" style="margin-top:24px">
