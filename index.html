@@ -1151,6 +1151,22 @@
     -webkit-overflow-scrolling: touch;
     border-radius: var(--radius);
   }
+  /* Scroll shadow wrapper — shows fade on right edge when content overflows */
+  .table-scroll-wrap {
+    position: relative;
+  }
+  .table-scroll-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 48px;
+    height: 100%;
+    background: linear-gradient(to left, var(--bg2) 0%, transparent 100%);
+    pointer-events: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  #sistema .table-scroll-wrap::after,
+  #mercado .table-scroll-wrap::after { background: linear-gradient(to left, var(--bg) 0%, transparent 100%); }
   .diag-table td, .tools-table td, .compare-table td, .benchmark-table td,
   .diag-table th, .tools-table th, .compare-table th, .benchmark-table th {
     white-space: normal;
@@ -1259,16 +1275,16 @@
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="num">$0</span>
-        <span class="label">Inversión en ads<br>para arrancar</span>
+        <span class="num">8</span>
+        <span class="label">Etapas del Customer<br>Value Journey</span>
       </div>
       <div class="hero-stat">
         <span class="num">5 min</span>
-        <span class="label">Calificación automática<br>de leads</span>
+        <span class="label">Calificación automática<br>de leads con IA</span>
       </div>
       <div class="hero-stat">
-        <span class="num">60×</span>
-        <span class="label">ROI documentado<br>ads de roofing</span>
+        <span class="num">7→8</span>
+        <span class="label">Cifras — el negocio<br>diseñado para escalar</span>
       </div>
     </div>
     <div class="scroll-hint">
@@ -1636,15 +1652,77 @@
           <tr><th>Componente</th><th>Herramienta</th><th>Función</th></tr>
         </thead>
         <tbody>
-          <tr><td>Captación</td><td><span class="tool-badge">FB/IG Ads</span> <span class="tool-badge">Flyers + QR</span></td><td>Tráfico segmentado en español e inglés</td></tr>
-          <tr><td>Calificación</td><td><span class="tool-badge">ManyChat</span> <span class="tool-badge">WhatsApp Business</span></td><td>Bot 24/7, respuesta automática &lt;2 min</td></tr>
-          <tr><td>Nurturing</td><td><span class="tool-badge">Secuencias WA</span></td><td>Follow-up a 3, 7, 14 días sin trabajo manual</td></tr>
-          <tr><td>CRM</td><td><span class="tool-badge">Pipedrive</span> <span class="tool-badge">Google Sheets</span></td><td>Pipeline visual, app móvil rápida (⚠️ no GHL para alto volumen)</td></tr>
-          <tr><td>Alertas</td><td><span class="tool-badge">WhatsApp</span> <span class="tool-badge">Telegram</span></td><td>Notificación a Pablo/Cintia solo cuando llega lead calificado</td></tr>
-          <tr><td>Reportes</td><td><span class="tool-badge">Dashboard semanal</span></td><td>Costo/lead · tasa calificación · cierres por pilar</td></tr>
+          <tr><td>Tráfico</td><td><span class="tool-badge">FB/IG Ads</span> <span class="tool-badge">Follow Me Ads</span> <span class="tool-badge">TikTok</span></td><td>Pixel warming → adquisición → retargeting en secuencia</td></tr>
+          <tr><td>Landing Pages</td><td><span class="tool-badge">Custom HTML</span> <span class="tool-badge">Copy probado</span></td><td>Página por pilar con CTA directo al bot. Pixel FB instalado.</td></tr>
+          <tr><td>Calificación</td><td><span class="tool-badge">ManyChat</span> <span class="tool-badge">WhatsApp Business</span></td><td>Bot IA 24/7, respuesta automática &lt;2 min, bilingüe</td></tr>
+          <tr><td>Nurturing IA</td><td><span class="tool-badge">Secuencias WA</span> <span class="tool-badge">Auto-scheduling</span></td><td>Follow-up a 3, 7, 14 días — agenda llamadas automáticamente</td></tr>
+          <tr><td>CRM IA</td><td><span class="tool-badge">Custom AI CRM</span> <span class="tool-badge">Lead scoring</span></td><td>Pipeline visual con IA: prioriza leads por probabilidad de cierre</td></tr>
+          <tr><td>Alertas</td><td><span class="tool-badge">WhatsApp</span> <span class="tool-badge">Telegram</span></td><td>Notificación solo cuando llega lead calificado — sin ruido</td></tr>
+          <tr><td>Reportes</td><td><span class="tool-badge">Dashboard KPIs</span></td><td>Revenue · CAC · LTV · ROI por pilar en tiempo real</td></tr>
         </tbody>
       </table>
     </div>
+
+    <!-- CUSTOMER VALUE JOURNEY -->
+    <div class="fade-in" style="margin-top:36px">
+      <h3 style="font-size:16px;font-weight:700;color:var(--white);margin-bottom:6px">Customer Value Journey — Ecosistema de Contractors</h3>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:20px;line-height:1.6">Cada etapa tiene su campaña, su contenido y su automatización. No es un funnel — es un sistema que convierte desconocidos en promotores activos.</p>
+      <div style="overflow-x:auto;padding-bottom:8px">
+        <div style="display:flex;align-items:stretch;gap:0;min-width:860px">
+
+          <div style="flex:1;background:var(--card);border:1px solid var(--border);border-right:none;border-radius:14px 0 0 14px;padding:16px 12px;text-align:center;min-width:100px">
+            <div style="font-size:20px;margin-bottom:6px">👁️</div>
+            <div style="font-size:11px;font-weight:800;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Aware</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.4">Ad en FB/IG<br>Reel orgánico<br>Post en grupos</div>
+          </div>
+          <div style="width:2px;background:var(--border);flex-shrink:0;align-self:stretch"></div>
+          <div style="flex:1;background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 12px;text-align:center;min-width:100px">
+            <div style="font-size:20px;margin-bottom:6px">💬</div>
+            <div style="font-size:11px;font-weight:800;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Engage</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.4">Consume contenido<br>Visita landing<br>Pixel lo captura</div>
+          </div>
+          <div style="width:2px;background:var(--border);flex-shrink:0;align-self:stretch"></div>
+          <div style="flex:1;background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 12px;text-align:center;min-width:100px">
+            <div style="font-size:20px;margin-bottom:6px">📲</div>
+            <div style="font-size:11px;font-weight:800;color:var(--green);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Subscribe</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.4">Llena el bot<br>Entra al CRM<br>Calificado en 5 min</div>
+          </div>
+          <div style="width:2px;background:var(--green);opacity:.4;flex-shrink:0;align-self:stretch"></div>
+          <div style="flex:1;background:linear-gradient(135deg,#0d2a1f,var(--card));border:1px solid rgba(0,200,150,0.3);padding:16px 12px;text-align:center;min-width:100px">
+            <div style="font-size:20px;margin-bottom:6px">🤝</div>
+            <div style="font-size:11px;font-weight:800;color:var(--green);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Convert</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.4">Primer trabajo<br>asignado. O paga<br>por CRM/ads.</div>
+          </div>
+          <div style="width:2px;background:var(--green);opacity:.4;flex-shrink:0;align-self:stretch"></div>
+          <div style="flex:1;background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 12px;text-align:center;min-width:100px">
+            <div style="font-size:20px;margin-bottom:6px">⭐</div>
+            <div style="font-size:11px;font-weight:800;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Excite</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.4">Resultados reales<br>Trabajo constante<br>Testimonial</div>
+          </div>
+          <div style="width:2px;background:var(--border);flex-shrink:0;align-self:stretch"></div>
+          <div style="flex:1;background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 12px;text-align:center;min-width:100px">
+            <div style="font-size:20px;margin-bottom:6px">📈</div>
+            <div style="font-size:11px;font-weight:800;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Ascend</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.4">CRM propio<br>Ads gestionadas<br>Ingreso recurrente</div>
+          </div>
+          <div style="width:2px;background:var(--border);flex-shrink:0;align-self:stretch"></div>
+          <div style="flex:1;background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 12px;text-align:center;min-width:100px">
+            <div style="font-size:20px;margin-bottom:6px">📣</div>
+            <div style="font-size:11px;font-weight:800;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Advocate</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.4">Recomienda<br>la red a otros<br>contractors</div>
+          </div>
+          <div style="width:2px;background:var(--border);flex-shrink:0;align-self:stretch"></div>
+          <div style="flex:1;background:var(--card);border:1px solid var(--border);border-left:none;border-radius:0 14px 14px 0;padding:16px 12px;text-align:center;min-width:100px">
+            <div style="font-size:20px;margin-bottom:6px">🔁</div>
+            <div style="font-size:11px;font-weight:800;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Promote</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.4">Referidos activos<br>CAC → $0<br>Flywheel</div>
+          </div>
+
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:8px;font-size:11px;color:var(--text3)">← deslizá para ver todas las etapas →</div>
+    </div>
+
   </div>
 </section>
 
@@ -1740,7 +1818,7 @@
   <div class="container">
     <div class="section-tag">06</div>
     <h2>Roadmap de <span>90 Días</span></h2>
-    <p class="section-desc">Tres fases con entregables concretos: arrancamos sin gastar un peso, validamos con resultado real, escalamos lo que funciona.</p>
+    <p class="section-desc">Tres fases con entregables concretos: calentamos el pixel desde el día uno, validamos con resultado real, escalamos hacia 7–8 cifras con infraestructura propia.</p>
 
     <div class="phases-timeline fade-in">
 
@@ -1752,23 +1830,24 @@
         </div>
         <div class="phase-right">
           <div class="phase-header">
-            <div class="phase-name">⚡ Setup & Quick Wins — Orgánico primero</div>
-            <div class="phase-budget">💸 $0 en ads</div>
+            <div class="phase-name">⚡ Foundation — Marca, Sistema & Pixel Warm-Up</div>
+            <div class="phase-budget">💸 $150–300 Follow Me Ads</div>
           </div>
-          <p class="phase-goal">Primer sistema funcionando antes de gastar dinero en publicidad. Resultados visibles en 14 días usando solo la red de contactos existente.</p>
+          <p class="phase-goal">Marca lista, sistema encendido y pixel calentando desde el día 1. Las Follow Me Ads siguen a cualquiera que visite la página — construyen audiencia para el retargeting de Fase 1 sin necesitar presupuesto mayor.</p>
           <div class="checklist">
-            <div class="check-item"><div class="check-icon"></div>Auditoría: qué canales, contactos y presencia digital tienen Pablo y Cintia hoy</div>
-            <div class="check-item"><div class="check-icon"></div>Crear/optimizar WhatsApp Business (número dedicado, foto, descripción)</div>
-            <div class="check-item"><div class="check-icon"></div>Configurar bot de calificación para contractors en WhatsApp/FB Messenger (en español)</div>
-            <div class="check-item"><div class="check-icon"></div>Crear 5–10 flyers digitales para Facebook groups + supermercados hispanos con QR code</div>
-            <div class="check-item"><div class="check-icon"></div>Postear en 10–15 grupos hispanos de contractors en Facebook</div>
-            <div class="check-item"><div class="check-icon"></div>Ingresar los contractors que ya conocen al CRM (los primeros 5–10)</div>
-            <div class="check-item"><div class="check-icon"></div>Conectar bot → CRM (Google Sheets) → notificación a Pablo/Cintia</div>
+            <div class="check-item"><div class="check-icon"></div>Identidad de marca: nombre, logo, paleta, tono — kit en Canva aplicado</div>
+            <div class="check-item"><div class="check-icon"></div>Instagram + Facebook + TikTok: perfiles optimizados, bio bilingüe, highlights</div>
+            <div class="check-item"><div class="check-icon"></div>Bot de calificación en WhatsApp/FB Messenger (español + inglés) conectado al CRM</div>
+            <div class="check-item"><div class="check-icon"></div>Landing pages por pilar: "conseguí trabajo constante" + "comprá tu casa sin banco"</div>
+            <div class="check-item"><div class="check-icon"></div>Follow Me Ads ($5–10/día): pixel en la landing, seguimos a los visitantes para retargeting</div>
+            <div class="check-item"><div class="check-icon"></div>30 posts de contenido programados + sistema de grupos FB (25+ grupos)</div>
+            <div class="check-item"><div class="check-icon"></div>CRM IA configurado: pipeline visual, auto-scheduling, alertas solo a leads calificados</div>
           </div>
           <div class="deliverables">
-            <div class="deliverable green">✓ Bot de calificación live en WhatsApp</div>
-            <div class="deliverable green">✓ 10+ perfiles de contractors en CRM</div>
-            <div class="deliverable">Primeros leads orgánicos desde grupos FB</div>
+            <div class="deliverable green">✓ Marca + perfiles live</div>
+            <div class="deliverable green">✓ Bot + CRM funcionando</div>
+            <div class="deliverable green">✓ Pixel con primeras 500–1,000 visitas</div>
+            <div class="deliverable">Landing pages con copy probado</div>
           </div>
         </div>
       </div>
@@ -1781,23 +1860,23 @@
         </div>
         <div class="phase-right">
           <div class="phase-header">
-            <div class="phase-name">🏗️ Sistema Core — Primeros ingresos</div>
-            <div class="phase-budget">💸 $150–300 ads (reinvertido)</div>
+            <div class="phase-name">🏗️ Tráfico + Retargeting — Primeros ingresos</div>
+            <div class="phase-budget">💸 $500–1,000/mes ads</div>
           </div>
-          <p class="phase-goal">Lanzar primera campaña paga. Presupuesto inicial viene de los primeros cierres orgánicos de Fase 0. Meta: el sistema genera su propio presupuesto.</p>
+          <p class="phase-goal">El pixel ya tiene audiencia caliente. Lanzamos campañas de adquisición + retargeting a los que visitaron pero no convirtieron. CVJ activo: cada etapa tiene su campaña específica.</p>
           <div class="checklist">
-            <div class="check-item"><div class="check-icon"></div>Lanzar campaña #1: Facebook ads en español → contractors buscando trabajo</div>
-            <div class="check-item"><div class="check-icon"></div>Lanzar campaña #2: Facebook ads en inglés → propietarios buscando construcción</div>
-            <div class="check-item"><div class="check-icon"></div>Optimizar copy y creativo con datos reales (A/B test: video con persona vs gráfica)</div>
-            <div class="check-item"><div class="check-icon"></div>Configurar CRM en Pipedrive si el volumen lo justifica</div>
-            <div class="check-item"><div class="check-icon"></div>Secuencias de nurturing automáticas (3, 7, 14 días para no-respuestas)</div>
-            <div class="check-item"><div class="check-icon"></div>Primer upsell: ofrecer GHL + ads gestionadas a los contractors captados</div>
+            <div class="check-item"><div class="check-icon"></div>Campaña de adquisición: FB ads en español → contractors + inglés → propietarios</div>
+            <div class="check-item"><div class="check-icon"></div>Retargeting: visitors de landing que no llenaron el bot → follow up automático</div>
+            <div class="check-item"><div class="check-icon"></div>A/B test de creativos: video testimonial vs gráfica vs carrusel — escalar el ganador</div>
+            <div class="check-item"><div class="check-icon"></div>Secuencias de nurturing IA (3, 7, 14 días) para leads que no calificaron todavía</div>
+            <div class="check-item"><div class="check-icon"></div>Auto-scheduling activado: el sistema agenda llamadas con Pablo/Cintia automáticamente</div>
+            <div class="check-item"><div class="check-icon"></div>Upsell a contractors: CRM + ads gestionadas → ingreso recurrente mensual</div>
           </div>
           <div class="deliverables">
-            <div class="deliverable green">✓ ≥20 contractors en CRM con perfil</div>
+            <div class="deliverable green">✓ ≥20 contractors en CRM calificados</div>
             <div class="deliverable green">✓ ≥10 leads propietarios calificados</div>
             <div class="deliverable green">✓ 1–2 contractors como clientes recurrentes</div>
-            <div class="deliverable">Costo/lead contractor &lt;$15</div>
+            <div class="deliverable">Costo/lead &lt;$15 con retargeting activo</div>
           </div>
         </div>
       </div>
@@ -1810,23 +1889,23 @@
         </div>
         <div class="phase-right">
           <div class="phase-header">
-            <div class="phase-name">🚀 Scale + Slow Flips Online</div>
-            <div class="phase-budget">💸 $500–1,000/mes ads</div>
+            <div class="phase-name">🚀 Escala — Sistema de 7 Cifras</div>
+            <div class="phase-budget">💸 $1,500–3,000/mes ads</div>
           </div>
-          <p class="phase-goal">Escalar lo que demostró ROI. Lanzar primera campaña para Slow Flips. Construir el ingreso pasivo del portfolio.</p>
+          <p class="phase-goal">Todo el Customer Value Journey activo. Slow Flips con su propio funnel. Software IA propio. El negocio opera como una máquina: leads entran, se califican, se nutren, y cierran sin intervención manual en cada paso.</p>
           <div class="checklist">
-            <div class="check-item"><div class="check-icon"></div>Aumentar presupuesto de ads en los creativos y audiencias con mejor ROI</div>
-            <div class="check-item"><div class="check-icon"></div>Lanzar campaña Slow Flips / Seller Finance en Facebook español</div>
-            <div class="check-item"><div class="check-icon"></div>Construir audiencias de retargeting (quienes interactuaron pero no calificaron aún)</div>
-            <div class="check-item"><div class="check-icon"></div>Escalar red de contractors: Farmers Markets, eventos de construcción</div>
-            <div class="check-item"><div class="check-icon"></div>TikTok / YouTube Shorts en español (orgánico, sin costo adicional)</div>
-            <div class="check-item"><div class="check-icon"></div>Dashboard de reportes automático semanal para Pablo y Cintia</div>
+            <div class="check-item"><div class="check-icon"></div>CVJ completo activo: cada etapa (Aware → Promote) tiene campaña, contenido y automatización</div>
+            <div class="check-item"><div class="check-icon"></div>Slow Flips: funnel completo — landing, bot, nurturing 30/60/90 días, cierre automatizado</div>
+            <div class="check-item"><div class="check-icon"></div>Software IA propio: CRM personalizado, auto-scheduling, scoring de leads — sin depender de terceros</div>
+            <div class="check-item"><div class="check-icon"></div>Lookalike audiences del 1% de mejores clientes → escalar con CPL mínimo</div>
+            <div class="check-item"><div class="check-icon"></div>Programa de referidos activo: contractors satisfechos → embajadores de la marca</div>
+            <div class="check-item"><div class="check-icon"></div>Dashboard ejecutivo: KPIs en tiempo real — revenue, CAC, LTV, ROI por pilar</div>
           </div>
           <div class="deliverables">
-            <div class="deliverable green">✓ ≥5 contractors como clientes recurrentes</div>
-            <div class="deliverable green">✓ ≥15 leads/mes Slow Flips calificados</div>
-            <div class="deliverable green">✓ $2,500–5,000 ingreso recurrente mensual</div>
-            <div class="deliverable">1ª propiedad Slow Flip en pipeline</div>
+            <div class="deliverable green">✓ ≥15 contractors clientes recurrentes</div>
+            <div class="deliverable green">✓ ≥30 leads/mes Slow Flips calificados</div>
+            <div class="deliverable green">✓ $10,000–25,000 MRR del ecosistema</div>
+            <div class="deliverable green">✓ Software IA propio operando</div>
           </div>
         </div>
       </div>
@@ -1846,14 +1925,14 @@
     <div class="fade-in" style="background:linear-gradient(135deg,#0d2a1f,var(--card));border:1px solid rgba(0,200,150,0.4);border-radius:var(--radius);padding:28px 32px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
       <div>
         <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:8px">Inversión inicial requerida</div>
-        <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--white);margin-bottom:4px">Setup Fee: <span style="color:var(--green)">$2,000</span></div>
-        <div style="font-size:13px;color:var(--text2);max-width:500px;line-height:1.6">Cubre el sistema completo: identidad de marca, perfiles en redes, motor de contenido 30 días, bot de calificación, CRM, flujos de automatización y dashboard. Es mi piel en el juego desde el día uno — y el trabajo creativo y operativo que requiere hacerlo bien.</div>
+        <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--white);margin-bottom:4px">Setup Fee: <span style="color:var(--green)">$2,500</span></div>
+        <div style="font-size:13px;color:var(--text2);max-width:500px;line-height:1.6">Cubre el sistema completo de arranque: marca, redes, contenido, bot IA, CRM personalizado, landing pages, Customer Value Journey por pilar y software de auto-scheduling. Todo lo necesario para que el negocio esté funcionando desde el día 1.</div>
       </div>
       <div style="flex-shrink:0;text-align:center">
         <div style="background:var(--green-dim);border:1px solid rgba(0,200,150,0.3);border-radius:var(--radius);padding:20px 28px">
-          <div style="font-size:12px;color:var(--text3);font-weight:600;margin-bottom:4px;text-decoration:line-through">Valor de mercado: $5,000–7,000</div>
+          <div style="font-size:12px;color:var(--text3);font-weight:600;margin-bottom:4px;text-decoration:line-through">Valor de mercado: $8,000–12,000</div>
           <div style="font-size:12px;color:var(--text2);font-weight:600;margin-bottom:6px">Inversión de alianza</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--green)">$2,000</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--green)">$2,500</div>
           <div style="font-size:12px;color:var(--text2);margin-top:4px">Luego: revenue share<br>solo pagás cuando ganás</div>
         </div>
       </div>
@@ -1908,6 +1987,21 @@
           <div style="font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px">Plan de contenido 30 días</div>
           <div style="font-size:12px;color:var(--text2);line-height:1.5">Calendario editorial + 30 posts listos + templates Canva + sistema de grupos FB.</div>
         </div>
+        <div style="background:var(--card2);border:1px solid rgba(0,200,150,0.25);border-radius:var(--radius-sm);padding:16px">
+          <div style="font-size:20px;margin-bottom:8px">🗺️</div>
+          <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:4px">Customer Value Journey</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">8 etapas mapeadas por pilar. Campaña y automatización para cada etapa del recorrido.</div>
+        </div>
+        <div style="background:var(--card2);border:1px solid rgba(0,200,150,0.25);border-radius:var(--radius-sm);padding:16px">
+          <div style="font-size:20px;margin-bottom:8px">🌐</div>
+          <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:4px">Landing pages con copy</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Página por pilar con copy de conversión probado. Pixel FB instalado para retargeting.</div>
+        </div>
+        <div style="background:var(--card2);border:1px solid rgba(0,200,150,0.25);border-radius:var(--radius-sm);padding:16px">
+          <div style="font-size:20px;margin-bottom:8px">🤖</div>
+          <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:4px">Software IA a medida</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">CRM personalizado con IA, auto-scheduling de citas y lead scoring. Sin depender de terceros.</div>
+        </div>
       </div>
       <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:var(--radius-sm);padding:14px 18px;font-size:13px;color:#fbbf24;font-weight:500">
         ⏱ Timeframe de setup: <strong style="color:var(--white)">14–21 días</strong> desde el pago. Marca, sistema y contenido del primer mes listos antes de invertir un peso en ads.
@@ -1953,6 +2047,7 @@
 
     <!-- Comparativa -->
     <div class="fade-in">
+      <div class="table-scroll-wrap">
       <table class="compare-table">
         <thead>
           <tr><th>Criterio</th><th>Opción 1 — Revenue Share</th><th>Opción 2 — Partnership</th></tr>
@@ -1965,6 +2060,7 @@
           <tr><td>Mejor para</td><td>Primeros 30–60 días, validar</td><td class="green-text">Post-resultados, largo plazo</td></tr>
         </tbody>
       </table>
+      </div>
 
       <div class="align-box" style="margin-top:20px">
         <strong>Propuesta concreta:</strong> Arrancar con <strong>Opción 1</strong> durante los primeros 60 días. Si el sistema genera leads reales y hay ingresos, formalizar <strong>Opción 2</strong> por escrito. Sin papeles al principio — la prueba son los resultados.
@@ -2032,7 +2128,7 @@
         <div class="step-num">3</div>
         <div class="step-content">
           <div class="step-title">Primera campaña orgánica en grupos de Facebook</div>
-          <div class="step-desc">Camino prepara los copies en español para postear en grupos hispanos de contractors. Pablo y Cintia postean (o Camino si tienen acceso). Objetivo: primeros leads entrando al bot sin gastar un peso en ads.</div>
+          <div class="step-desc">Camino prepara los copies en español para postear en grupos hispanos de contractors. Pablo y Cintia postean (o Camino si tienen acceso). Simultáneamente, las Follow Me Ads están corriendo ($5–10/día) calentando el pixel desde el primer visitante.</div>
           <div class="step-meta">
             <span class="meta-tag">✍️ Camino hace el copy</span>
             <span class="meta-tag">📤 Pablo/Cintia postean</span>
@@ -2083,7 +2179,8 @@
       </div>
     </div>
 
-    <table class="benchmark-table fade-in">
+    <div class="table-scroll-wrap fade-in">
+    <table class="benchmark-table">
       <thead>
         <tr><th>Métrica</th><th>Benchmark del sector</th><th>Ventaja de este enfoque</th></tr>
       </thead>
@@ -2115,6 +2212,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </section>
 
